@@ -4,6 +4,8 @@ def reformat_languages(languages)
     value.each do |language, properties|
        new_hash[language] = properties
        if new_hash[language][:style] 
+        new_hash[language][:style] << [key]
+      else
         new_hash[language][:style] = [key]
     end
   end  
